@@ -4,7 +4,7 @@ import Description from './Description';
 
 const RobotController = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="mx-auto flex flex-col min-h-screen">
       <Description />
       <Chessboard />
     </div>
