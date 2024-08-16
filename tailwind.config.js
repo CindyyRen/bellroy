@@ -8,6 +8,8 @@ module.exports = {
         'grey-light': '#F7F7F7',
         'yellow-light': '#e15a1d',
         'yellow-dark': '#c75724',
+        'chessboard-light': '#f0d9b5',
+        'chessboard-dark': '#b58863',
       },
     },
   },
