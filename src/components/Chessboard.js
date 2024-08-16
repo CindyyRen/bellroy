@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 import { BsRobot } from 'react-icons/bs';
-export default function Chessboard() {
+
+// 定义旋转类映射
+const rotationClasses = {
+  EAST: 'rotate-90',
+  SOUTH: 'rotate-180',
+  WEST: '-rotate-90',
+  NORTH: 'rotate-0',
+};
+
+export default function Chessboard({ robot }) {
+  if (!robot) robot = { x: 2, y: 2, facing: 'WEST' };
   const rows = Array(5).fill(null);
   const cols = Array(5).fill(null);
-  const [robot, setRobot] = useState({ x: 2, y: 2, facing: 'NORTH' });
+  const [robotPos, setRobotPos] = useState(robot);
   return (
-    <div className="w-[320px] h-[320px]  border border-gray-400">
-      {' '}
+    <div className="w-[320px] h-[320px]  border border-gray-400 mt-7">
       {/* 棋盘容器 */}
       {rows.map((_, rowIndex) => (
         <div key={rowIndex} className="flex">
@@ -19,13 +28,10 @@ export default function Chessboard() {
                   : 'bg-chessboard-dark'
               } flex items-center justify-center`}
             >
-              {/* <BsRobot className="w-6 h-6" /> */}
-              {rowIndex === robot.y && colIndex === robot.x && (
+              {rowIndex === robotPos.y && colIndex === robotPos.x && (
                 <BsRobot
-                  className={`w-8 h-8 ${
-                    robot.facing === 'NORTH'
-                      ? 'text-custom-gray'
-                      : 'text-red-500'
+                  className={`w-8 h-8 text-custom-gray ${
+                    rotationClasses[robotPos.facing]
                   }`}
                 />
               )}
