@@ -8,7 +8,7 @@ const Description = () => {
       {/* List the control commands */}
       <div className="container mx-auto text-sm ">
         <h4 className="text-xl bold mb-4">
-          Control the robot using below commands:
+          Control the robot with below commands:
         </h4>
         <ul>
           {commandLists.map((command) => {
