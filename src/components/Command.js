@@ -25,7 +25,7 @@ const Command = () => {
         />
         <div>
           <button
-            className="w-full max-w-fit bg-yellow-dark text-white py-2 px-4 rounded hover:bg-yellow-light focus:outline-none focus:ring-2"
+            className="w-full sm:max-w-fit bg-yellow-dark text-white py-2 px-4 rounded hover:bg-yellow-light focus:outline-none focus:ring-2"
             type="submit"
           >
             Submit Commands
