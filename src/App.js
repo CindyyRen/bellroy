@@ -5,6 +5,7 @@ import Home from './components/Home'; // 你的 Home 组件
 import RobotController from './components/RobotController';
 function App() {
   return (
+    
     <Router>
       <Navbar />
       <Routes>

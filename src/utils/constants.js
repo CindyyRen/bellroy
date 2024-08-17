@@ -28,7 +28,8 @@ export const commandLists = [
   },
 ];
 
-export const facing = ['EAST', 'SOUTH', 'WEST', 'NORTH'];
+// export const facing = ['EAST', 'SOUTH', 'WEST', 'NORTH'];
+export const facing = ['NORTH', 'EAST', 'SOUTH', 'WEST'];
 
 export const errorMessages = {
   wrongBegin: 'Start the game by place(x,y,facing) commands.',

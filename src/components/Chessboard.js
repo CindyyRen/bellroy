@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BsRobot } from 'react-icons/bs';
+import { useSelector } from 'react-redux';
 
 // 定义旋转类映射
 const rotationClasses = {
@@ -9,11 +10,17 @@ const rotationClasses = {
   NORTH: 'rotate-0',
 };
 
-export default function Chessboard({ robot }) {
-  if (!robot) robot = { x: 2, y: 2, facing: 'WEST' };
-  const rows = Array(5).fill(null);
-  const cols = Array(5).fill(null);
-  const [robotPos, setRobotPos] = useState(robot);
+export default function Chessboard({ num }) {
+  const { robot } = useSelector((state) => state.game);
+  console.log(robot);
+  const rows = Array(num).fill(null);
+  const cols = Array(num).fill(null);
+
+  // Default values if robot is not defined
+  const robotX = robot?.x ?? 0;
+  const robotY = robot?.y ?? 0;
+  const robotFacing = robot?.facing ?? 'NORTH';
+
   return (
     <div className="w-[320px] h-[320px]  border border-gray-400 mt-7">
       {/* 棋盘容器 */}
@@ -28,11 +35,9 @@ export default function Chessboard({ robot }) {
                   : 'bg-chessboard-dark'
               } flex items-center justify-center`}
             >
-              {rowIndex === robotPos.y && colIndex === robotPos.x && (
+              {rowIndex === robotX && colIndex === robotY && (
                 <BsRobot
-                  className={`w-8 h-8 text-custom-gray ${
-                    rotationClasses[robotPos.facing]
-                  }`}
+                  className={`w-8 h-8 text-custom-gray ${rotationClasses[robotFacing]}`}
                 />
               )}
             </div>

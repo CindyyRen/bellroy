@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // 使用 react-router-dom 处理导航
 import '../index.css';
-import logo from '../assets/bellroy-white.png'
-
+import logo from '../assets/bellroy-white.png';
 const Navbar = () => {
   return (
-    <nav className="bg-custom-gray p-2">
+    <nav className="bg-custom-gray p-2 sticky top-0">
       <div className="container mx-auto flex justify-between items-center">
         {/* 左侧 Logo */}
         <div className="text-white text-2xl font-bold">
           <Link to="/" className="hover:text-gray-400">
-            <img src={logo} width="65px" alt="bellroy"/>
+            <img src={logo} alt="logo" width="60px" />
+            {/* <img src={logo} width="65px" alt="bellroy"/> */}
           </Link>
         </div>
 

@@ -124,3 +124,4 @@ export const checkCommand = (commandStr) => {
 
   return { ...commandResult, command: command, param: param };
 };
+

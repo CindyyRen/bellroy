@@ -4,17 +4,17 @@ import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
 
 const Tips = () => {
   return (
-    <div className="mt-4 text-sm p-2">
-      <h4 className="text-xl mb-2">Tips: </h4>
+    <div className=" text-xs p-2">
+      <h4 className="text-lg mb-2">Tips: </h4>
       <ul>
-        <li className="flex items-center mt-2">
-          <MdKeyboardDoubleArrowRight /> Commands is{' '}
-          <strong>CASE INSENSITIVE</strong>;{' '}
+        <li className="flex items-center mt-1">
+          <MdKeyboardDoubleArrowRight /> Commands is &nbsp;
+          <strong> CASE INSENSITIVE</strong>;
         </li>
-        <li className="flex items-cente mt-2">
-          <MdKeyboardDoubleArrowRight /> Invalid commands will be discarded;{' '}
+        <li className="flex items-cente mt-1">
+          <MdKeyboardDoubleArrowRight /> Invalid commands will be discarded;
         </li>
-        <li className="flex items-center mt-2">
+        <li className="flex items-center mt-1">
           <MdKeyboardDoubleArrowRight /> Facing value :
           <strong>{facing.map((face, index) => `"${face}",`)}</strong>
         </li>

@@ -25,6 +25,7 @@ const Home = () => {
           <img className="ml-3" src={arrowpng} alt="play icon" />
         </button>
       </div>
+      {/* <img src={logo} alt="logo" width="100px" /> */}
     </div>
   );
 };
