@@ -23,7 +23,6 @@ export default function Chessboard({ num }) {
 
   return (
     <div className="w-[320px] h-[320px]  border border-gray-400 mt-7">
-      {/* 棋盘容器 */}
       {rows.map((_, rowIndex) => (
         <div key={rowIndex} className="flex">
           {cols.map((_, colIndex) => (

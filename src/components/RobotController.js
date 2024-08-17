@@ -4,10 +4,11 @@ import Description from './Description';
 import Tips from './Tips';
 import Command from './Command';
 import { useSelector, useDispatch } from 'react-redux';
+import { toggleTable } from '../actions/gameActions';
 
 const RobotController = () => {
   const dispatch = useDispatch();
-  const { output, showTable, toggleTable } = useSelector((state) => state.game);
+  const { output, showTable } = useSelector((state) => state.game);
   return (
     <div className="mx-auto flex flex-col min-h-screen">
       <Description />
@@ -18,15 +19,15 @@ const RobotController = () => {
         </div>
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="flex flex-col justify-center">
-            <button
+            {/* <button
               className="w-full sm:max-w-fit bg-yellow-dark text-white py-2 px-4 rounded hover:bg-yellow-light focus:outline-none focus:ring-2"
               onClick={() => dispatch(toggleTable())}
             >
               {showTable ? 'Hide ChessBoard' : 'Show ChessBoard'}
-            </button>
+            </button> */}
             {showTable && <Chessboard num={5} />}
             <h2 className="text-center mt-2 text-xl font-bold text-yellow-light">
-              {output}
+              {showTable && output}
             </h2>
           </div>
         </div>

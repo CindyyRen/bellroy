@@ -4,17 +4,14 @@ import { setCommandStr, handleCommand } from '../actions/gameActions';
 
 const Game = () => {
   const dispatch = useDispatch();
-  const [command, setCommand] = useState('');
   const { robot, error, commandStr } = useSelector((state) => state.game);
 
   const handleChange = (e) => {
     dispatch(setCommandStr(e.target.value));
-    // setCommand(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // dispatch(setCommandStr(command));
     dispatch(handleCommand());
   };
 
@@ -30,8 +27,7 @@ const Game = () => {
               Please input your commands:
             </label>
             <input
-              // className="w-full border-b-2 border-yellow-dark bg-transparent focus:border-yellow-light focus:outline-none py-2 px-3 text-gray-700 placeholder-gray-400"
-              className="w-full border-b-2 border-yellow-dark bg-transparent focus:border-yellow-light focus:outline-none py-2 px-3 text-gray-700 placeholder-gray-400 !bg-transparent focus:!bg-transparent active:!bg-transparent hover:!bg-transparent"
+              className="w-full border-b-2 border-yellow-dark bg-transparent focus:border-yellow-light focus:outline-none py-2 px-3 text-gray-700 placeholder-gray-400"
               id="commandInput"
               placeholder={
                 !robot

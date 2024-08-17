@@ -115,30 +115,30 @@ const gameReducer = (state = initialState, action) => {
           let yLocation = state.robot.y;
           let output = 'success';
           if (state.robot.facing === 'NORTH') {
-            yLocation++;
-            if (yLocation >= tableSize) {
-              yLocation = tableSize - 1;
+            xLocation--;
+            if (xLocation < 0) {
+              xLocation = 0;
               output = 'failed';
             }
           }
           if (state.robot.facing === 'SOUTH') {
-            yLocation--;
-            if (yLocation < 0) {
-              yLocation = 0;
-              output = 'failed';
-            }
-          }
-          if (state.robot.facing === 'EAST') {
             xLocation++;
             if (xLocation >= tableSize) {
               xLocation = tableSize - 1;
               output = 'failed';
             }
           }
+          if (state.robot.facing === 'EAST') {
+            yLocation++;
+            if (yLocation >= tableSize) {
+              yLocation = tableSize - 1;
+              output = 'failed';
+            }
+          }
           if (state.robot.facing === 'WEST') {
-            xLocation--;
-            if (xLocation < 0) {
-              xLocation = 0;
+            yLocation--;
+            if (yLocation < 0) {
+              yLocation = 0;
               output = 'failed';
             }
           }
