@@ -30,7 +30,8 @@ const Game = () => {
               Please input your commands:
             </label>
             <input
-              className="w-full border-b-2 border-yellow-dark bg-transparent focus:border-yellow-light focus:outline-none py-2 px-3 text-gray-700 placeholder-gray-400"
+              // className="w-full border-b-2 border-yellow-dark bg-transparent focus:border-yellow-light focus:outline-none py-2 px-3 text-gray-700 placeholder-gray-400"
+              className="w-full border-b-2 border-yellow-dark bg-transparent focus:border-yellow-light focus:outline-none py-2 px-3 text-gray-700 placeholder-gray-400 !bg-transparent focus:!bg-transparent active:!bg-transparent hover:!bg-transparent"
               id="commandInput"
               placeholder={
                 !robot
