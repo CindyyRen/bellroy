@@ -1,9 +1,6 @@
 // src/redux/reducers.js
 import {
   SET_COMMAND_STR,
-  SET_ROBOT,
-  SET_ERROR,
-  SET_OUTPUT,
   TOGGLE_TABLE,
   HANDLE_COMMAND,
 } from '../actions/gameActions.js';
@@ -22,15 +19,6 @@ const gameReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_COMMAND_STR:
       return { ...state, commandStr: action.payload };
-
-    // case SET_ROBOT:
-    //   return { ...state, robot: action.payload };
-
-    // case SET_ERROR:
-    //   return { ...state, error: action.payload };
-
-    // case SET_OUTPUT:
-    //   return { ...state, output: action.payload };
 
     case TOGGLE_TABLE:
       return { ...state, showTable: !state.showTable };
@@ -113,33 +101,33 @@ const gameReducer = (state = initialState, action) => {
         case 'MOVE': {
           let xLocation = state.robot.x;
           let yLocation = state.robot.y;
-          let output = 'success';
+          let output = 'Success';
           if (state.robot.facing === 'NORTH') {
             xLocation--;
             if (xLocation < 0) {
               xLocation = 0;
-              output = 'failed';
+              output = 'Failed';
             }
           }
           if (state.robot.facing === 'SOUTH') {
             xLocation++;
             if (xLocation >= tableSize) {
               xLocation = tableSize - 1;
-              output = 'failed';
+              output = 'Failed';
             }
           }
           if (state.robot.facing === 'EAST') {
             yLocation++;
             if (yLocation >= tableSize) {
               yLocation = tableSize - 1;
-              output = 'failed';
+              output = 'Failed';
             }
           }
           if (state.robot.facing === 'WEST') {
             yLocation--;
             if (yLocation < 0) {
               yLocation = 0;
-              output = 'failed';
+              output = 'Failed';
             }
           }
           newState = {
