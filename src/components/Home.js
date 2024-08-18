@@ -23,7 +23,9 @@ const Home = () => {
           }}
           className="flex items-center justify-center text-yellow-dark hover:text-yellow-light bg-transparent border-none font-bold"
         >
-          Let's play
+          <span className="transition-transform duration-300 hover:scale-110">
+            Let's play
+          </span>
           <img className="ml-3" src={arrowpng} alt="play icon" />
         </button>
       </div>
