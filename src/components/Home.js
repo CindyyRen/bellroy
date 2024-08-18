@@ -11,11 +11,11 @@ const Home = () => {
       <h1 className="text-4xl font-bold mb-10">Welcome to Toy Robot Game</h1>
       <Link to="/robot">
         {/* <img src={wali} alt="logo" className="h-[250px]" /> */}
-        <img src={logo} alt="logo" className="h-[250px]" />
+        <img src={logo} alt="logo" className="h-[200px]" />
       </Link>
-      <div className="mt-5 flex flex-col justify-center">
+      <div className="mt-10 flex flex-col justify-center">
         <p className="mb-5">
-          Control toy robot on a grid with a set of commands.
+          Control toy robot on a grid with a setof commands.
         </p>
         <button
           onClick={() => {
