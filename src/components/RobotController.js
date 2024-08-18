@@ -17,14 +17,15 @@ const RobotController = () => {
           <Tips />
           <Command />
         </div>
-        <div className="w-full md:w-1/2 flex justify-center">
-          <div className="flex flex-col justify-center">
-            {/* <button
+
+        <div className="w-full flex justify-center">
+          <div className="flex flex-col items-center">
+            <button
               className="w-full sm:max-w-fit bg-yellow-dark text-white py-2 px-4 rounded hover:bg-yellow-light focus:outline-none focus:ring-2"
               onClick={() => dispatch(toggleTable())}
             >
               {showTable ? 'Hide ChessBoard' : 'Show ChessBoard'}
-            </button> */}
+            </button>
             {showTable && <Chessboard num={5} />}
             <h2 className="text-center mt-2 text-xl font-bold text-yellow-light">
               {showTable && output}
