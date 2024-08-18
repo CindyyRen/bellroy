@@ -1,6 +1,7 @@
 import React from 'react';
 import wali from '../assets/64456.png';
 import arrowpng from '../assets/arrow.svg';
+import logo from '../assets/robot-svgrepo-com.svg';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Home = () => {
@@ -9,7 +10,8 @@ const Home = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-grey-normal p-4">
       <h1 className="text-4xl font-bold mb-10">Welcome to Toy Robot Game</h1>
       <Link to="/robot">
-        <img src={wali} alt="logo" className="h-[250px]" />
+        {/* <img src={wali} alt="logo" className="h-[250px]" /> */}
+        <img src={logo} alt="logo" className="h-[250px]" />
       </Link>
       <div className="mt-5 flex flex-col justify-center">
         <p className="mb-5">

@@ -23,14 +23,14 @@ const gameReducer = (state = initialState, action) => {
     case SET_COMMAND_STR:
       return { ...state, commandStr: action.payload };
 
-    case SET_ROBOT:
-      return { ...state, robot: action.payload };
+    // case SET_ROBOT:
+    //   return { ...state, robot: action.payload };
 
-    case SET_ERROR:
-      return { ...state, error: action.payload };
+    // case SET_ERROR:
+    //   return { ...state, error: action.payload };
 
-    case SET_OUTPUT:
-      return { ...state, output: action.payload };
+    // case SET_OUTPUT:
+    //   return { ...state, output: action.payload };
 
     case TOGGLE_TABLE:
       return { ...state, showTable: !state.showTable };
